@@ -16,7 +16,7 @@ Uma plataforma de desenvolvimento que utiliza em seu coração uma das máquinas
 Necessario a instalaçao do Node.js.
 
 Aplicação:
-npm install 
+npm install / 
 npm start
 
 
