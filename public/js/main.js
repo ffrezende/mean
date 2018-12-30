@@ -3,6 +3,9 @@ import ngRoute from 'angular-route';
 import ngAnimate from 'angular-animate';
 import ngResource from 'angular-resource';
 import angularCookies from 'angular-cookies';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import '../css/efeitos.css'
 
 
 const appDirectivas = angular.module('minhasDiretivas', []);
