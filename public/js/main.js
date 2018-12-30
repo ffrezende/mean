@@ -1,21 +1,43 @@
-angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResource', 'meusServicos'])
-	.config(function($routeProvider, $locationProvider) {
+import angular from 'angular';
+import ngRoute from 'angular-route';
+import ngAnimate from 'angular-animate';
+import ngResource from 'angular-resource';
+import angularCookies from 'angular-cookies';
 
-		$routeProvider.when('/fotos', {
-			templateUrl: 'partials/principal.html',
-			controller: 'FotosController'
-		});
 
-		$routeProvider.when('/fotos/new', {
-			templateUrl: 'partials/foto.html',
-			controller: 'FotoController'
-		});
+const appDirectivas = angular.module('minhasDiretivas', []);
+const appServices = angular.module('meusServicos', ['ngResource'])
+const app = angular.module('alurapic', ['minhasDiretivas','ngAnimate', 'ngRoute', 'ngResource', 'meusServicos']);
 
-		$routeProvider.when('/fotos/edit/:fotoId', {
-			templateUrl: 'partials/foto.html',
-			controller: 'FotoController'
-		});
+/* Controllers */
+require('./controllers/foto-controller')(app);
+require('./controllers/fotos-controller')(app);
+require('./controllers/grupos-controller')(app);
 
-		$routeProvider.otherwise({redirectTo: '/fotos'});
+// /* Directives */
+require('./directives/minhas-diretivas')(appDirectivas);
 
+// /* Services */
+require('./services/meus-servicos')(appServices);
+
+
+app.config(['$routeProvider', function($routeProvider) {
+
+	$routeProvider.when('/fotos', {
+		templateUrl: 'partials/principal.html',
+		controller: 'FotosController'
 	});
+
+	$routeProvider.when('/fotos/new', {
+		templateUrl: 'partials/foto.html',
+		controller: 'FotoController'
+	});
+
+	$routeProvider.when('/fotos/edit/:fotoId', {
+		templateUrl: 'partials/foto.html',
+		controller: 'FotoController'
+	});
+
+	$routeProvider.otherwise({redirectTo: '/fotos'});
+
+}]);
