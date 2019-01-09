@@ -1,7 +1,9 @@
 <img src="https://travis-ci.org/ffrezende/mean.svg?branch=master"/>
 
-# MEAN
+# WebPack - Exemplo de configuração 
+# CI - Exemplo de configuração Trevis
 
+# MEAN
 MEAN Stack é uma solução completa para desenvolvimento de aplicações Web na plataforma Node.js.
 ## (M)ongoDB
 Um banco de dados baseado em documentos que armazena no banco uma estrutura muito parecida com o JSON, aquela estrutura de dados que estamos acostumados a lidar no mundo JavaScript.
