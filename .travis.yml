@@ -1,0 +1,9 @@
+branches:
+  only:
+    - master
+language: node_js
+node_js:
+  - "9"
+script:
+  - npm install
+  - npm run build-dev
