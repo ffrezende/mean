@@ -1,3 +1,5 @@
+<a target="_blank" href="https://travis-ci.org/ffrezende/mean.svg?branch=master"></a>
+
 # MEAN
 
 MEAN Stack é uma solução completa para desenvolvimento de aplicações Web na plataforma Node.js.
