@@ -1,4 +1,4 @@
-<a target="_blank" href="https://travis-ci.org/ffrezende/mean.svg?branch=master"></a>
+<img src="https://travis-ci.org/ffrezende/mean.svg?branch=master"/>
 
 # MEAN
 
